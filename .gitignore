@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+lib/
+lib64/
+parts/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.pyvenv/
+# If you're using pyenv-virtualenv:
+.python-version
+
+# dotenv environment variables file
+.env
+
+# Flask cache
+instance/
+*.db
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache
+
+# Pytest
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# MacOS files
+.DS_Store

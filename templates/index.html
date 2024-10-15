@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        
+        <!-- Flask-WTF Form to add a new task -->
+        <form action="{{ url_for('index') }}" method="POST">
+            {{ form.hidden_tag() }}  <!-- CSRF protection -->
+            {{ form.task.label }} 
+            {{ form.task(size=30) }}  <!-- Input field with Flask-WTF -->
+            {{ form.submit() }}       <!-- Submit button -->
+        </form>
+        
+        <!-- List of tasks -->
+        <ul>
+            {% for task in tasks %}
+                <li>{{ task['content'] }} <a href="{{ url_for('delete_task', task_id=loop.index0) }}" class="delete-btn">Delete</a></li>
+            {% else %}
+                <li>No tasks yet!</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
